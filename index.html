@@ -69,10 +69,24 @@
             resize: vertical;
         }
 
+        .payment-icons {
+            display: flex;
+            gap: 15px; /* Adds space between the icons */
+            align-items: center;
+        }
+
+        .payment-option {
+            display: flex;
+            align-items: center;
+        }
+
+        .payment-option input[type="radio"] {
+            margin-right: 10px;
+        }
+
         .payment-icons i {
             font-size: 24px;
-            margin-right: 15px;
-            color: #007bff; /* You can adjust icon colors as needed */
+            color: #007bff; /* Adjust icon color if needed */
         }
     </style>
 </head>
@@ -134,10 +148,22 @@
             <div class="col-md-6">
                 <label class="form-label">We accept:</label>
                 <div class="payment-icons">
-                    <i class="fab fa-cc-visa"></i>
-                    <i class="fab fa-cc-mastercard"></i>
-                    <i class="fab fa-cc-paypal"></i>
-                    <i class="fab fa-cc-amex"></i>
+                    <div class="payment-option">
+                        <input type="radio" name="payment-method" value="visa">
+                        <i class="fab fa-cc-visa"></i>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" name="payment-method" value="mastercard">
+                        <i class="fab fa-cc-mastercard"></i>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" name="payment-method" value="paypal">
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                    <div class="payment-option">
+                        <input type="radio" name="payment-method" value="amex">
+                        <i class="fab fa-cc-amex"></i>
+                    </div>
                 </div>
             </div>
             <!-- Message section -->
@@ -165,3 +191,4 @@
 </body>
 
 </html>
+
